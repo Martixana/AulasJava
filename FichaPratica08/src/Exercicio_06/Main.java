@@ -50,7 +50,8 @@ public class Main {
     double numero1, numero2;
 
     String operacao;
-
+    
+ //for an infinite cycle
     while(true){
 
         System.out.print("Insira um número: ");
