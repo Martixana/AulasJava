@@ -10,21 +10,33 @@ public class Aluno {
     private double media;
 
     //Constructor
-    public Aluno (String nome, int idade, String curso, double media){
+    public Aluno(String nome, int idade, String curso, double media) {
         this.nome = nome;
-        this.idade =idade;
+        this.idade = idade;
         this.curso = curso;
         this.media = media;
 
     }
 
     //methods
-    public boolean aprovacao(){
-        if (this.media > 10) {
 
-        }
-            return true;
+    // method to grab average
+    public void getMedia() {
+
+        System.out.println(this.media);
     }
 
+    //method to compare average
+    public String pass_or_not(){
+        if (this.media >= 10){
+            return "Passed";
+        }
+        else{
+            return "Failed";
+        }
 
+    }
 }
+
+
+

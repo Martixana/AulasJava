@@ -43,7 +43,7 @@ public class Main {
         System.out.println(resolucao[0]);
         System.out.println(resolucao[2]);
         System.out.println(resolucao[3]);*/
-1
+
     Calculadora calculadoraA = new Calculadora();
     Scanner input  = new Scanner(System.in);
 
