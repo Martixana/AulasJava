@@ -23,7 +23,7 @@ public class Ex_09 {
 
         //declare variables
         String musicGenre;
-        String[] genres_f_allSongs = new String[musicGenre];
+       // String[] genres_f_allSongs = new String[musicGenre];
 
         //header
         String linha = scanner1.nextLine();
