@@ -32,4 +32,4 @@ public class Ex_03 {
 
     }
 
-//this is a comment. Didn't need bool
+//this is a comment. Didn't need bool. but doesn't allow the if else structure, hence the need for extra variable to attach an if else to
