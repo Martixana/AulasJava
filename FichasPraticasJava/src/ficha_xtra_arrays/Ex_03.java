@@ -32,3 +32,4 @@ public class Ex_03 {
 
     }
 
+//this is a comment. Didn't need bool
