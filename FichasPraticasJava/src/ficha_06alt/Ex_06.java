@@ -35,7 +35,7 @@ public class Ex_06 {
          */
 
         do {
-            System.out.println("*** Análise de um vetor ***");
+            System.out.println("*** Análise de um vetor *** \n");
 
             //options
             System.out.println("Please choose an option from the menu: ");
@@ -56,39 +56,40 @@ public class Ex_06 {
             switch (menu_option) {
                 case 1: //Largest number
                     int maiorElemento = maior(num_array);
-                    System.out.println("Maior elemento: " + maiorElemento);
+                    System.out.println("Maior elemento: " + maiorElemento + "\n");
                     break;
 
             case 2: //Smallest number
-                System.out.println("Menor elemento: " + menor(num_array));
+                System.out.println("Menor elemento: " + menor(num_array) + "\n");
                 break;
 
             case 3: //Crescente ou não
                 if (crescente(num_array)) {
-                    System.out.println("Crescente");
+                    System.out.println("Crescente" + "\n");
                 } else {
-                    System.out.println("Não Crescente");
+                    System.out.println("Não Crescente\n" );
                 }
                 break;
 
 
             case 4: //Largest: prime or not
                 if (primo(maior(num_array))) {
-                    System.out.println("Maior Elemento é Primo");
+                    System.out.println("Maior Elemento é Primo\n");
                 } else {
-                    System.out.println("Maior Elemento não é primo");
+                    System.out.println("Maior Elemento não é primo\n");
                 }
                 break;
 
+
             case 5: //Sair
-                System.out.println("Obrigada e até a próxima");
+                System.out.println("*** Obrigada e até a próxima*** ");
                 break;
 
             default:// Inválido
-                System.out.println("Opção Inválida");
+                System.out.println("Opção Inválida\n");
         }
 
-    }while(menu_option !=4);
+    }while(menu_option !=5);
 
     }
 }
