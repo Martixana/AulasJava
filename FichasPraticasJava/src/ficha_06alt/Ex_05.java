@@ -19,7 +19,7 @@ public class Ex_05 {
     //find smallest int in array
     public static int menor(int[] vetor) {
 
-        int menor = -1;
+        int menor = 0;
         //loop through array to find the largest number
         for (int i = 0; i < vetor.length; i++) {
             if (vetor[i] < menor) {
@@ -32,7 +32,7 @@ public class Ex_05 {
     //in ascending order?
     public static boolean crescente(int[] vetor) {
 
-        //loop through array to find out if in ascending order, start at position one to compare to position 0
+        //loop through array to find out if in ascending order, start at index one to compare to index 0
         /*for (int i = 1; i < vetor.length; i++) {
             if (vetor[i] <= vetor[i -1]) {
                     return false;
