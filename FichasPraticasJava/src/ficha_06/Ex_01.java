@@ -44,20 +44,14 @@ public class Ex_01 {
         }
 
     }
+
     //**** Scanner added. Can I put both functions into one, so that the question of the option continues on loop? *****
    public static void main(String[] args) {
 
-       Scanner input = new Scanner(System.in);
-        //declarar variaveis
-        String resposta;
-
         System.out.println("\n*** Bem-vindo ao programa dos barulhos ***");
-        do {
-            System.out.println("Escolha um animal entre os seguintes: gato, cao, peixe, vaca, porco:");
-            resposta = input.next();
+        fazerBarulho("gato");
 
-            fazerBarulho(resposta);
-        }while( !resposta .equals("SAIR"));
+        fazerBarulho("CAO");
 
 
     }
