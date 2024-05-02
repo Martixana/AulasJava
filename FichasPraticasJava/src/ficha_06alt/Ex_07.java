@@ -19,20 +19,20 @@ public class Ex_07 {
             for(int j = 1; j <= columns; j++) {
                 //first character
                 if (j == 1) {
-                    System.out.println(letter);
+                    System.out.print(letter); // add the \n to letter to make the side letters zigzag
                 }
                 //middle characters
                 if (j != 1 && j != columns) {
-                    System.out.println(" ");
+                    System.out.print(" ");
                 }
 
                 //last character
                 if (j == columns) {
-                    System.out.print(letter);
+                    System.out.print(letter + "\n");
                 }
         }
         //empty line
-        System.out.println();
+       //System.out.println();
     }
                 //last line
                 for(int i = 1; i <= columns; i++){
