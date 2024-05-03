@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Ex_07_02 {
 
 //Try to change following code into a capital letter I shape in the end
-        public static void desenharQuadrado(int nLinhas, int nColunas, String caracter) {
+        public static void desenharLetra_E(int nLinhas, int nColunas, String caracter) {
 
             // Primeira Linha
             for (int i = 1; i <= nColunas; i++) {
@@ -14,9 +14,10 @@ public class Ex_07_02 {
             System.out.println();
 
 
-            // Linhas do Meio
-            for (int m = 1; m <= nLinhas - 2; m++) {
-                for (int i = 1; i <= nColunas; i++) {
+
+            // Linhas do Meio - part 1
+            for (int m = 1; m <= nLinhas; m++) {
+                for (int i = 1; i <= (nColunas); i++) {
 
                     // Primeiro caracter
                     if (i == 1) {
@@ -24,13 +25,8 @@ public class Ex_07_02 {
                     }
 
                     // Espaços
-                    if (i != 1 && i != nColunas) {
+                    if (i != 1) {
                         System.out.print(" ");
-                    }
-
-                    // Ultimo caracter
-                    if (i == nColunas) {
-                        System.out.print(caracter);
                     }
 
                 }
@@ -38,10 +34,40 @@ public class Ex_07_02 {
             }
 
 
-            // Ultima linha
+
+            //linha do meio (centro)
+                for(int m = 1; m <= nLinhas; m++){
+                    for(int i = 1; i <= nColunas; i++){
+                            System.out.print(caracter);
+                        }
+                  }
+
+
+
+            // Linhas do Meio - part 2
+            for (int m = 1; m <= nLinhas; m++) {
+                for (int i = 1; i <= (nColunas); i++) {
+
+                    // Primeiro caracter
+                    if (i == 1) {
+                        System.out.print(caracter);
+                    }
+
+                    // Espaços
+                    if (i != 1) {
+                        System.out.print(" ");
+                    }
+
+                }
+                System.out.println();
+            }
+
+
+            // Última Linha
             for (int i = 1; i <= nColunas; i++) {
                 System.out.print(caracter);
             }
+
 
         }
 
@@ -66,7 +92,7 @@ public class Ex_07_02 {
             System.out.print("Insira um caracter: ");
             caracter = input.next();
 
-            desenharQuadrado(linhas, colunas, caracter);
+            desenharLetra_E(linhas, colunas, caracter);
 
         }
     }
