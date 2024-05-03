@@ -8,7 +8,7 @@ public class Ex_07_02 {
 
             // Primeira Linha
             for (int i = 1; i <= nColunas; i++) {
-                System.out.print(caracter);
+                System.out.print(caracter + "\t");
             }
 
             System.out.println();
@@ -17,7 +17,7 @@ public class Ex_07_02 {
 
             // Linhas do Meio - part 1
             for (int m = 1; m <= nLinhas; m++) {
-                for (int i = 1; i <= (nColunas); i++) {
+                for (int i = 1; i <= nColunas; i++) {
 
                     // Primeiro caracter
                     if (i == 1) {
@@ -36,11 +36,10 @@ public class Ex_07_02 {
 
 
             //linha do meio (centro)
-                for(int m = 1; m <= nLinhas; m++){
-                    for(int i = 1; i <= nColunas; i++){
-                            System.out.print(caracter);
+                    for(int i = 1; i <= (nColunas * 0.5); i++){
+                            System.out.print(caracter + "\t");
                         }
-                  }
+
 
 
 
@@ -65,9 +64,10 @@ public class Ex_07_02 {
 
             // Última Linha
             for (int i = 1; i <= nColunas; i++) {
-                System.out.print(caracter);
+                System.out.print(caracter + "\t");
             }
 
+            System.out.println();
 
         }
 
@@ -89,7 +89,7 @@ public class Ex_07_02 {
             colunas = input.nextInt();
 
             // Ler caracter
-            System.out.print("Insira um caracter: ");
+            System.out.print("Insira um caracter:  " + "\n");
             caracter = input.next();
 
             desenharLetra_E(linhas, colunas, caracter);
