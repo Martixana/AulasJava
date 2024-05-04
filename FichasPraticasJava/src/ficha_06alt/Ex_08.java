@@ -4,21 +4,21 @@ import java.util.Scanner;
 
 public class Ex_08 {
 
-    public static int somarMatrizes(int[][] matrixA, int[][] matrixB){
+    public static int somarMatrizes(int[][] matrixA, int[][] matrixB) {
 
         int somatorio = 0;
 
         //loop through matrixA and add elements
-        for(int i = 0; i < matrixA.length; i++){
-            for(int k = 0; k < matrixA[0].length; k++){
+        for (int i = 0; i < matrixA.length; i++) {
+            for (int k = 0; k < matrixA[0].length; k++) {
 
                 somatorio += i;
             }
 
         }
         //loop through matrixB and add elements to somatorio, too
-        for(int l = 0; l < matrixB.length; l++){
-            for(int m = 0; m < matrixB[0].length; m++){
+        for (int l = 0; l < matrixB.length; l++) {
+            for (int m = 0; m < matrixB[0].length; m++) {
                 somatorio += l;
             }
 
@@ -27,7 +27,7 @@ public class Ex_08 {
     }
 
 
-    public static void main(String[][] args) {
+    public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
 
@@ -39,7 +39,7 @@ public class Ex_08 {
         for (int i = 0; i < matrixA.length; i++) {
             for (int k = 0; k < matrixA[0].length; k++) {
 
-                System.out.println("Please enter a whole number for Matrix A [" + i + "]: ");
+                System.out.println("Please enter a whole number for Matrix A [" +[i][k] + "]: ");
                 matrixA[i][k] = input.nextInt();
 
             }
@@ -48,7 +48,7 @@ public class Ex_08 {
 
         //loop through matrixB and fill each index
         for (int l = 0; l < matrixB.length; l++) {
-            for (int m = 0; m < matrixA[0].length; m++) {
+            for (int m = 0; m < matrixB[0].length; m++) {
 
                 System.out.println("Please enter a whole number for Matrix B [" + l + "]: ");
                 matrixB[l][m] = input.nextInt();
@@ -56,10 +56,10 @@ public class Ex_08 {
             }
 
         }
-        System.out.println("The sum of both matrixes is: " + somarMatrizes(matrixA, matrixB));
+        somarMatrizes(matrixA, matrixB);
 
-
-        }
 
     }
+
+}
 
