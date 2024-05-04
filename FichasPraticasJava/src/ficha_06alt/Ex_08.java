@@ -27,10 +27,11 @@ public class Ex_08 {
     }
 
 
-    public static int userInput() {
+    public static void main(String[][] args) {
 
         Scanner input = new Scanner(System.in);
 
+        //declare matrix variables
         int[][] matrixA = new int[3][3];
         int[][] matrixB = new int[3][3];
 
@@ -40,6 +41,7 @@ public class Ex_08 {
 
                 System.out.println("Please enter a whole number for Matrix A [" + i + "]: ");
                 matrixA[i][k] = input.nextInt();
+
             }
 
         }
@@ -50,13 +52,14 @@ public class Ex_08 {
 
                 System.out.println("Please enter a whole number for Matrix B [" + l + "]: ");
                 matrixB[l][m] = input.nextInt();
+
             }
 
         }
-    }
+        System.out.println("The sum of both matrixes is: " + somarMatrizes(matrixA, matrixB));
 
 
-
+        }
 
     }
 
