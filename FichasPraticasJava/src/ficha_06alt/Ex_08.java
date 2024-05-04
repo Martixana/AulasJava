@@ -6,24 +6,25 @@ public class Ex_08 {
 
     public static int somarMatrizes(int[][] matrixA, int[][] matrixB) {
 
-        int somatorio = 0;
+        int somatorioA = 0;
+        int somatorioB = 0;
 
         //loop through matrixA and add elements
         for (int i = 0; i < matrixA.length; i++) {
             for (int k = 0; k < matrixA[0].length; k++) {
 
-                somatorio += i;
+                somatorioA += i;
             }
 
         }
         //loop through matrixB and add elements to somatorio, too
         for (int l = 0; l < matrixB.length; l++) {
             for (int m = 0; m < matrixB[0].length; m++) {
-                somatorio += l;
+                somatorioB += l;
             }
 
         }
-        return somatorio;
+        return (somatorioA + somatorioB);
     }
 
 
@@ -39,7 +40,7 @@ public class Ex_08 {
         for (int i = 0; i < matrixA.length; i++) {
             for (int k = 0; k < matrixA[0].length; k++) {
 
-                System.out.println("Please enter a whole number for Matrix A [" +[i][k] + "]: ");
+                System.out.println("Please enter a whole number for Matrix A [" +i + "]: ");
                 matrixA[i][k] = input.nextInt();
 
             }
