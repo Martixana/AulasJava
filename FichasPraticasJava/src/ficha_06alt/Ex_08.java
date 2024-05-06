@@ -23,9 +23,12 @@ public class Ex_08 {
         };
 
         //number of rows and columns in matrix. Declared just for the purpose of looping thru
-        //so loop has something to compare itself against
-        rows = a.length;
-        cols = a[0].length;
+        //so loop has something to compare itself against. This works whether it is b.length or
+        // a.length. It's just a way to later have something for your for loops to count against
+        //since we don't have a "generic" matrix. An actual matrix needs to be used. Which isn't
+        //a problem since these operations can only be performed with two matrixes of the same size.
+        rows = b.length;
+        cols = b[0].length;
 
         //declare a diff array to hold result of subtraction from arrays above
         int diff[][] = new int[rows][cols];
