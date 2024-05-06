@@ -38,7 +38,10 @@ public class Ex_08_03 {
     // the same by way of the methods for cols/rows
     public static int[][] matrix_A() {
         Scanner input = new Scanner(System.in);
-        int[][] matrix_A = new int[getUser_rows()][getUser_cols()];
+        int rows, cols;
+        rows = getUser_rows();
+        cols = getUser_cols();
+        int[][] matrix_A = new int[rows][cols];
 
         for (int k = 0; k < matrix_A.length; k++) {
             for (int m = 0; m < matrix_A[0].length; m++) {
@@ -53,7 +56,10 @@ public class Ex_08_03 {
     //method to initialize matrix B
     public static int[][] matrix_B() {
         Scanner input = new Scanner(System.in);
-        int[][] matrix_B = new int[getUser_rows()][getUser_cols()];
+        int rows, cols;
+        rows = getUser_rows();
+        cols = getUser_cols();
+        int[][] matrix_B = new int[rows][cols];
 
         for (int k = 0; k < matrix_B.length; k++) {
             for (int m = 0; m < matrix_B[0].length; m++) {
