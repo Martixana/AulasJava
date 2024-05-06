@@ -49,13 +49,13 @@ public class Ex_08_02 {
             int add[][] = new int[rows][cols];
 
             //number of rows and columns in matrix. Declared just for the purpose of looping thru
-            //so loop has something to compare itself against. This works whether it is b.length or
+            //so loop has something to compare itself against (see previous exercise, original version. This works whether it is b.length or
             // a.length. It's just a way to later have something for your for loops to count against
             //since we don't have a "generic" matrix. An actual matrix needs to be used. Which isn't
             //a problem since these operations can only be performed with two matrixes of the same size.
 
             //addition of matrix a and b. Store results in diff
-            for (int m = 0; m < a.length; m++) {
+            for (int m = 0; m < a.length; m++) { //notice, could use b.length here to the same end
                 for (int k = 0; k < a[0].length; k++) {
                     add[m][k] = a[m][k] + b[m][k];
                 }
@@ -63,7 +63,7 @@ public class Ex_08_02 {
             }
             //print out new matrix
             System.out.println("Addition of two matrixes: ");
-            for (int m = 0; m < a.length; m++) {
+            for (int m = 0; m < a.length; m++) { //notice, could use b.length here but they are the same so it doesn't matter which one is used.
                 for (int k = 0; k < a[0].length; k++) {
                     System.out.print(add[m][k] + " ");
                 }
