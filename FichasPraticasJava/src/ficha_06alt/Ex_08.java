@@ -1,66 +1,50 @@
 package ficha_06alt;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Ex_08 {
 
-    public static int somarMatrizes(int[][] matrixA, int[][] matrixB) {
-
-        int somatorioA = 0;
-        int somatorioB = 0;
-
-        //loop through matrixA and add elements
-        for (int i = 0; i < matrixA.length; i++) {
-            for (int k = 0; k < matrixA[0].length; k++) {
-
-                somatorioA += i;
-            }
-
-        }
-        //loop through matrixB and add elements to somatorio, too
-        for (int l = 0; l < matrixB.length; l++) {
-            for (int m = 0; m < matrixB[0].length; m++) {
-                somatorioB += l;
-            }
-
-        }
-        return (somatorioA + somatorioB);
-    }
-
-
     public static void main(String[] args) {
+        int rows, cols;
 
-        Scanner input = new Scanner(System.in);
+        //initialize matrix A
+        int a[][] = {
+                {2, 2, 2},
+                {2, 2, 2},
+                {2, 2, 2}
+        };
 
-        //declare matrix variables
-        int[][] matrixA = new int[3][3];
-        int[][] matrixB = new int[3][3];
+        //initialize matrix B
+        int b[][] = {
 
-        //loop through matrixA and fill each index
-        for (int i = 0; i < matrixA.length; i++) {
-            for (int k = 0; k < matrixA[0].length; k++) {
+                {1, 1, 1},
+                {1, 1, 1},
+                {1, 1, 1}
+        };
 
-                System.out.println("Please enter a whole number for Matrix A [" +i + "]: ");
-                matrixA[i][k] = input.nextInt();
+        //number of rows and columns in matrix. Declared just for the purpose of looping thru
+        //so loop has something to compare itself against
+        rows = a.length;
+        cols = a[0].length;
 
+        //declare a diff array to hold result of subtraction from arrays above
+        int diff[][] = new int[rows][cols];
+
+        //subtraction of matrix a and b. Store results in diff
+        for (int m = 0; m < rows; m++) {
+            for (int k = 0; k < cols; k++) {
+                diff[m][k] = a[m][k] - b[m][k];
             }
 
         }
-
-        //loop through matrixB and fill each index
-        for (int l = 0; l < matrixB.length; l++) {
-            for (int m = 0; m < matrixB[0].length; m++) {
-
-                System.out.println("Please enter a whole number for Matrix B [" + l + "]: ");
-                matrixB[l][m] = input.nextInt();
-
+        System.out.println("Subtraction of two matrixes: ");
+        for (int m = 0; m < rows; m++) {
+            for (int k = 0; k < cols; k++) {
+                System.out.print(diff[m][k] + " ");
             }
-
+            System.out.println();
         }
-        somarMatrizes(matrixA, matrixB);
-
-
     }
-
 }
+
 
