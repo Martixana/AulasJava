@@ -12,7 +12,7 @@ public class Ex_08_03 {
         do {
             System.out.println("Please enter a positive integer for the number of rows in the matrix: ");
             rows = input.nextInt();
-        } while (rows < 0);
+        } while (rows <= 0);
 
         return rows;
 
@@ -25,9 +25,9 @@ public class Ex_08_03 {
         int cols;
 
         do {
-            System.out.println("Please enter a positive integer for the number of cols in the matrix: ");
+            System.out.println("Please enter a positive integer for the number of columns in the matrix: ");
             cols = input.nextInt();
-        } while (cols < 0);
+        } while (cols <=0);
 
         return cols;
 
@@ -42,7 +42,7 @@ public class Ex_08_03 {
 
         for (int k = 0; k < matrix_A.length; k++) {
             for (int m = 0; m < matrix_A[0].length; m++) {
-                System.out.println("Please enter an integer into the matrix[" + k + "][" + m + "]");
+                System.out.println("Please enter an integer into the matrix[" + k + "][" + m + "]: ");
                 matrix_A[k][m] = input.nextInt();
             }
             System.out.println();
