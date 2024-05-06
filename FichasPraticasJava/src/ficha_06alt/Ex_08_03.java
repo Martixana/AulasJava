@@ -63,7 +63,7 @@ public class Ex_08_03 {
 
         for (int k = 0; k < matrix_B.length; k++) {
             for (int m = 0; m < matrix_B[0].length; m++) {
-                System.out.println("Please enter an integer into the matrix[" + k + "][" + m + "]:");
+                System.out.println("Please enter an integer into the second matrix[" + k + "][" + m + "]:");
                 matrix_B[k][m] = input.nextInt();
             }
             System.out.println();
@@ -90,6 +90,7 @@ public class Ex_08_03 {
     }
 
     public static void main(String[] args) {
+
         System.out.print(matrix_result());
     }
 
