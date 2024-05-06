@@ -9,12 +9,17 @@ public class Ex_08_02 {
             Scanner input = new Scanner(System.in);
             int rows, cols;
 
-            //get size of matrixes from user
-            System.out.println("Please enter a positive integer for the number of rows for each matrix: ");
-            rows = input.nextInt();
+            //get size of matrix from user
+            //added do/while to protect program from neg number inputs
+            do {
+                System.out.println("Please enter a positive integer for the number of rows for each matrix: ");
+                rows = input.nextInt();
+            }while(rows < 0);
 
-            System.out.println("Please enter a positive integer for the number of columns for each matrix: ");
-            cols = input.nextInt();
+            do {
+                System.out.println("Please enter a positive integer for the number of columns for each matrix: ");
+                cols = input.nextInt();
+            }while(cols < 0);
 
             //declare matrixes a and b
             int a[][] = new int[rows][cols];
@@ -57,7 +62,7 @@ public class Ex_08_02 {
 
             }
             //print out new matrix
-            System.out.println("Subtraction of two matrixes: ");
+            System.out.println("Addition of two matrixes: ");
             for (int m = 0; m < a.length; m++) {
                 for (int k = 0; k < a[0].length; k++) {
                     System.out.print(add[m][k] + " ");
