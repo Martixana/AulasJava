@@ -34,13 +34,8 @@ public class Ex_08_03 {
     }
 
     //method to initialize matrix A
-    //using rows/cols as parameters allows us to control their lengths and make sure they are
-    // the same by way of the methods for cols/rows
-    public static int[][] matrix_A() {
+    public static int[][] matrix_A(int rows, int cols) {
         Scanner input = new Scanner(System.in);
-        int rows, cols;
-        rows = getUser_rows();
-        cols = getUser_cols();
         int[][] matrix_A = new int[rows][cols];
 
         for (int k = 0; k < matrix_A.length; k++) {
@@ -54,11 +49,8 @@ public class Ex_08_03 {
     }
 
     //method to initialize matrix B
-    public static int[][] matrix_B() {
+    public static int[][] matrix_B(int rows, int cols) {
         Scanner input = new Scanner(System.in);
-        int rows, cols;
-        rows = getUser_rows();
-        cols = getUser_cols();
         int[][] matrix_B = new int[rows][cols];
 
         for (int k = 0; k < matrix_B.length; k++) {
@@ -72,17 +64,14 @@ public class Ex_08_03 {
     }
 
     //method to perform matrix addition
-    public static int[][] matrix_result() {
-        //variables to hold previous matrixes
-        int[][] a = matrix_A();
-        int[][] b = matrix_B();
+    public static int[][] matrix_result(int[][] a, int [][]b) {
+       int rows = a.length;
+       int cols = a[0].length;
+       //variable -create new matrix to hold result
+        int[][] result = new int[rows][cols];
 
-        //variable -create new matrix to hold result
-        int[][] result = new int[getUser_rows()][getUser_cols()]; //pass methods directly as parameters
-
-        for (int k = 0; k < result.length; k++) {
-            for (int m = 0; m < result[0].length; m++) {
-
+        for (int k = 0; k < rows; k++) {
+            for (int m = 0; m < cols; m++) {
                 result[k][m] = a[k][m] + b[k][m];
             }
         }
@@ -90,9 +79,18 @@ public class Ex_08_03 {
     }
 
     public static void main(String[] args) {
-
-        System.out.print(matrix_result());
+        int rows = getUser_rows();
+        int cols = getUser_cols();
+        int[][] a = matrix_A(rows, cols);
+        int[][] b = matrix_B(rows, cols);
+        int[][] result = matrix_result(a, b);
+        System.out.println("Resulting Matrix: ");
+        for(int[] row : result) {
+            for (int cell : row){
+                System.out.print( cell + " ");
+            }
+            System.out.println();
+        }
     }
-
-
+    
 }
