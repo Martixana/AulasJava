@@ -40,7 +40,7 @@ public class Ex_08_03 {
 
         for (int k = 0; k < matrix_A.length; k++) {
             for (int m = 0; m < matrix_A[0].length; m++) {
-                System.out.println("Please enter an integer into the matrix[" + k + "][" + m + "]: ");
+                System.out.println("Please enter an integer into matrix A[" + k + "][" + m + "]: ");
                 matrix_A[k][m] = input.nextInt();
             }
             System.out.println();
@@ -55,7 +55,7 @@ public class Ex_08_03 {
 
         for (int k = 0; k < matrix_B.length; k++) {
             for (int m = 0; m < matrix_B[0].length; m++) {
-                System.out.println("Please enter an integer into the second matrix[" + k + "][" + m + "]:");
+                System.out.println("Please enter an integer into matrix B[" + k + "][" + m + "]:");
                 matrix_B[k][m] = input.nextInt();
             }
             System.out.println();
@@ -74,8 +74,9 @@ public class Ex_08_03 {
             for (int m = 0; m < cols; m++) {
                 result[k][m] = a[k][m] + b[k][m];
             }
+            System.out.println();
         }
-        return result;
+       return result;
     }
 
     public static void main(String[] args) {
@@ -84,7 +85,6 @@ public class Ex_08_03 {
         int[][] a = matrix_A(rows, cols);
         int[][] b = matrix_B(rows, cols);
         int[][] result = matrix_result(a, b);
-        System.out.println("Resulting Matrix: ");
         for(int[] row : result) {
             for (int cell : row){
                 System.out.print( cell + " ");
@@ -92,5 +92,5 @@ public class Ex_08_03 {
             System.out.println();
         }
     }
-    
+
 }
